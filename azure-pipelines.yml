@@ -27,5 +27,5 @@ steps:
     azureSubscription: 'Free Trial(17f5cae8-4b87-4736-a078-50448ee7fc75)'
     appType: 'webAppLinux'
     WebAppName: 'flapboon-demo'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/dist/'
+    packageForLinux: 'dist/'
     RuntimeStack: 'NODE|12-lts'
