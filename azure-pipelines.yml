@@ -27,4 +27,4 @@ steps:
     azureSubscription: 'Free Trial(17f5cae8-4b87-4736-a078-50448ee7fc75)'
     appType: 'webApp'
     WebAppName: 'fb-new'
-    packageForLinux: 'dist/'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/dist'
