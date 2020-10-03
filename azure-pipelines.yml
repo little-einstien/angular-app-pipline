@@ -1,11 +1,5 @@
 # Node.js with Angular
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Azure subscription Paid(17f5cae8-4b87-4736-a078-50448ee7fc75)'
-    appType: 'webAppLinux'
-    WebAppName: 'flapboon-demo'
-    packageForLinux: 'dist/'
+
 # Build a Node.js project that uses Angular.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
@@ -27,3 +21,10 @@ steps:
     npm install
     ng build --prod
   displayName: 'npm install and build'
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure subscription Paid(17f5cae8-4b87-4736-a078-50448ee7fc75)'
+    appType: 'webAppLinux'
+    WebAppName: 'flapboon-demo'
+    packageForLinux: 'dist/'
